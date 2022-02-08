@@ -51,7 +51,6 @@ FormScriptYourName = {
   */
   onSave: function(eventContext) {
     const formContext = eventContext.getFormContext();
-    const Xrm = formContext;
 
     // COPY/PASTE OnSave CODE HERE
   },
@@ -71,12 +70,18 @@ FormScriptYourName = {
   onLoad: function(eventContext) {
     if (eventContext) {
       const formContext = executionContext.getFormContext();
-      const Xrm = formContext;
-
+     
       // If you pass execution context, put your code here.
-      // You will have access to Xrm and formContext.
 
       // COPY/PASTE OnLoad CODE HERE
+      
+      /* // Example: Watch an attribute for changes
+      let name = formContext.getAttribute('crm_name');
+      name.addOnChange((context) => {
+        var updated_name = context.getEventSource();
+        console.log(`name has changed to ${updated_name.getValue()}`);
+      });
+      */
 
     } else {
       // If you do not pass execution context, your code goes here
