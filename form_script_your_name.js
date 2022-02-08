@@ -69,7 +69,7 @@ FormScriptYourName = {
   */
   onLoad: function(eventContext) {
     if (eventContext) {
-      const formContext = executionContext.getFormContext();
+      const formContext = eventContext.getFormContext();
      
       // If you pass execution context, put your code here.
 
