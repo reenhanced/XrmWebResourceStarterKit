@@ -86,9 +86,10 @@ FormScriptYourName = {
       });
       */
       
-      /* // Example: Get a tab by name, get section on a tab
+      /* // Example: Get a tab by name, get section on a tab, hide it
       let tab = formContext.ui.tabs.get('general');
       let section = tab.sections.get('section_name_not_display_name');
+      section.setVisible(false);
       */
       
 
