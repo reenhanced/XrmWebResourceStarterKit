@@ -28,6 +28,7 @@ FormScriptYourName = {
    * V8 quick links:
    *    eventContext: https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/xrm/v8/index.d.ts#L1077 (EventContext)
    *    formContext:  https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/xrm/v8/index.d.ts#L258  (Page)
+   *    xrmContext:   https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/xrm/v8/index.d.ts#L85 (Xrm.Context)
    */
 
 
@@ -51,6 +52,7 @@ FormScriptYourName = {
   */
   onSave: function(eventContext) {
     const formContext = eventContext.getFormContext();
+    const xrmContext  = eventContext.getContext();
 
     // COPY/PASTE OnSave CODE HERE
   },
@@ -70,6 +72,7 @@ FormScriptYourName = {
   onLoad: function(eventContext) {
     if (eventContext) {
       const formContext = eventContext.getFormContext();
+      const xrmContext  = eventContext.getContext();
      
       // If you pass execution context, put your code here.
 
@@ -82,6 +85,12 @@ FormScriptYourName = {
         console.log(`name has changed to ${updated_name.getValue()}`);
       });
       */
+      
+      /* // Example: Get a tab by name, get section on a tab
+      let tab = formContext.ui.tabs.get('general');
+      let section = tab.sections.get('section_name_not_display_name');
+      */
+      
 
     } else {
       // If you do not pass execution context, your code goes here
